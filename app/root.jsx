@@ -8,7 +8,9 @@ import {
 } from "remix";
 
 export function meta() {
-  return { title: "New Remix App" };
+  return {
+    title: "Record speeds with Remix on Cloudflare and Upstash Redis",
+  };
 }
 
 export default function App() {
