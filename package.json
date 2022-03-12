@@ -6,7 +6,7 @@
   "sideEffects": false,
   "main": "build/index.js",
   "scripts": {
-    "postinstall": "patch-package && remix setup cloudflare-workers",
+    "postinstall": "remix setup cloudflare-workers",
     "build": "cross-env NODE_ENV=production remix build",
     "dev:remix": "cross-env NODE_ENV=development remix watch",
     "dev:miniflare": "cross-env NODE_ENV=development miniflare ./build/index.js --watch",
@@ -23,7 +23,6 @@
     "remix": "^1.2.3"
   },
   "devDependencies": {
-    "patch-package": "^6.4.7",
     "@cloudflare/workers-types": "^2.2.2",
     "@remix-run/dev": "^1.2.3",
     "@remix-run/eslint-config": "^1.2.3",
@@ -34,8 +33,5 @@
   },
   "engines": {
     "node": ">=14"
-  },
-  "browser": {
-    "isomorphic-fetch": false
   }
 }
